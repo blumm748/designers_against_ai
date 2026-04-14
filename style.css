@@ -95,6 +95,44 @@ section div.info {
   z-index: 2;
 }
 
+section div.info figure{
+  padding: 2rem;
+  min-height: 30vh;
+  font-family: "degular", serif;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 2;
+}
+
+section div.info figure form{
+display: grid;
+color: var(--first-color);
+}
+
+section div.info figure form input[type="text"],
+section div.info figure form input[type="email"],
+section div.info figure form textarea[name="message"]{
+  color: var(--first-color);
+  background-color: var(--second-color);
+}
+
+section div.info figure form input[placeholder="Email"],
+section div.info figure form input[type="email"],
+section div.info figure form textarea[name="message"]{
+  color: var(--first-color);
+}
+
+
+section div.info figure form button{
+  background-color: var(--first-color);
+  font-family: "dottonoji", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+  cursor: none;
+  font-size: 0.75em;
+}
+
 section div.info p,
 section div.info figure {
   margin: 5em 0em;
@@ -147,8 +185,15 @@ section:nth-child(2) div.title .designerList{
 }
 
 figcaption {
-  font-size: 0.75em;
+  text-transform: uppercase;
+  font-size: 1em;
   margin-top: 0.2rem;
+  font-family: "dottonoji", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+  cursor: none;
+  
 }
 
 img {

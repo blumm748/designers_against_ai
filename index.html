@@ -83,8 +83,25 @@
 
       <div class="info">
         <figure>
-          <img>
-          <figcaption>Submit Form</figcaption>
+          <figcaption>Form</figcaption>
+          <form method="POST" id="form">
+
+            <input type="hidden" name="access_key" value="fafb8def-14c8-451c-847e-43d1bed16b49">
+            <input type="hidden" name="subject" value="New Submission from Web3Forms">
+            <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+            <!-- Custom Form Data -->
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="specialty" placeholder="Specialty" required>
+            <input type="text" name="location" placeholder="Location">
+            <textarea name="message" placeholder="Anything you want to add..."></textarea>
+
+            <button type="submit">Submit</button>
+
+            <div id="result"></div>
+
+          </form>
         </figure>
       </div>
     </section>
@@ -93,6 +110,7 @@
     </div>
 
     <script src="/sketch.js"></script>
+    <script src="/form.js"></script>
 
   </body>
 </html>
