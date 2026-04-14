@@ -1,0 +1,220 @@
+/* adapted from @SuperHi on youtube :') */
+
+:root {
+  --first-color: #d630e5;
+  --second-color: #000000;
+  --third-color: #ff0000;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  outline: 1px solid var(--third-color);
+
+}
+
+html {
+  font-size: calc(10px + 1vmax);
+}
+
+body {
+  font-family: "dottonoji", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+  cursor: none;
+
+  color: var(--first-color);
+  background-color: var(--second-color);
+}
+
+h1,
+h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+h1:before,
+figcaption:before {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  margin-top: 1.5ex;
+  width: calc(28ex + 1vmax);
+  height: 1ex;
+  background-color: var(--third-color);
+  /* margin: 0 0.9em 0 0; */
+  mix-blend-mode: color-burn;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+}
+
+section div.title {
+  padding-top: 8vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  background-color: var(--second-color);
+}
+
+section div.title h1{
+  margin-right: 100%;
+}
+
+section div.title h1:nth-child(2) {
+  margin-left: 3vw;
+}
+
+section div.title h1:nth-child(3) {
+  margin-left: 6vw;
+}
+
+section div.title h1:nth-child(4) {
+  margin-left: 9vw;
+}
+
+section div.title h1:nth-child(5) {
+  margin-left: 12vw;
+}
+
+section div.info {
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: "degular", serif;
+  font-weight: 400;
+  font-style: normal;
+  /* background-color: var(--second-color); */
+  z-index: 2;
+}
+
+section div.info p,
+section div.info figure {
+  margin: 5em 0em;
+  font-size: 1em;
+  background-color: var(--second-color);
+}
+
+section div.info p i{
+  font-style: normal;
+  outline: none;
+}
+
+section div.info p i:hover{
+  font-family: "degular", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+  text-decoration: underline;
+  color: #ff0000;
+}
+
+section div.info p:first-of-type,
+section div.info figure:first-of-type {
+  margin-top: 0;
+}
+
+section div.info p:last-of-type,
+section div.info figure:last-of-type {
+  margin-bottom: 0;
+}
+
+
+section:nth-child(1) div.title {
+  background-size: cover;
+  background-position: 50% 50%;
+
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+section:nth-child(2) div.title .designerList{
+  display: grid;
+  font-family: 'degular';
+  font-size: 1em;
+  grid-template: repeat(16 , 1fr) / 1fr 1fr 1fr 1fr;
+  height: 0vh;
+  margin: 0;
+  align-items: center;
+  justify-content: 100%;
+
+}
+
+figcaption {
+  font-size: 0.75em;
+  margin-top: 0.2rem;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.trail { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60px; 
+    width: 60px;
+    border-radius: 50%;
+    background: rgb(255, 0, 0);
+    mix-blend-mode: overlay;
+    filter: blur(5px);
+    pointer-events: none;
+    z-index: 4;
+  }
+
+  .line{
+    position: fixed;
+    z-index: 0;
+    outline: #ff0000 solid 0.5px;
+    height: 100vh;
+    width: 0px;
+    top: 50%;
+    left: 83%;
+    transform: translate(-50%,-50%);
+  }
+
+@media (max-width: 800px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  section:nth-child(odd) div.title,
+  section:nth-child(even) div.title {
+    background-color: var(--first-color);
+    color: var(--second-color);
+
+    position: static;
+    height: auto;
+  }
+
+  section:nth-child(odd) div.info,
+  section:nth-child(even) div.info {
+    background-color: var(--second-color);
+    color: var(--first-color);
+  }
+
+  section div.title h1:nth-child(2) {
+    display: none;
+  }
+
+  section div.title h1:nth-child(3) {
+    display: none;
+  }
+
+  section div.title h1:nth-child(4) {
+    display: none;
+  }
+
+  section div.title h1:nth-child(5) {
+  display: none;  
+}
+}
