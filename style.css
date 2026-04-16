@@ -22,7 +22,7 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 1.25;
-  cursor: none;
+  /* cursor: none; */
 
   color: var(--first-color);
   background-color: var(--second-color);
@@ -54,7 +54,7 @@ section {
 }
 
 section div.title {
-  padding-top: 8vh;
+  padding-top: 2vh;
   padding-left: 2vw;
   padding-right: 2vw;
   height: 100vh;
@@ -67,6 +67,8 @@ section div.title {
 
 section div.title h1{
   margin-right: 100%;
+  cursor: none;
+  padding-bottom: 2vh;
 }
 
 section div.title h1:nth-child(2) {
@@ -85,8 +87,52 @@ section div.title h1:nth-child(5) {
   margin-left: 12vw;
 }
 
-section div.info {
+
+section div.designerList {
   padding: 2rem;
+  min-height: 100vh;
+  font-family: "degular", serif;
+  font-weight: 400;
+  font-style: normal;
+  /* background-color: var(--second-color); */
+  z-index: 2;
+}
+
+section div.designerList table{
+  border-collapse: collapse;
+  width: 55vw;
+}
+
+section div.designerList table caption{
+  text-align: left;
+  justify-content: left;
+  font-family: "dottonoji", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+section div.designerList table h2{
+  text-align: left;
+  justify-content: left;
+  font-family: "dottonoji", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+section div.designerList table p{
+  padding: 1em 0.5em;
+  align-self: center;
+}
+
+section div.info {
+  padding: 1rem;
   min-height: 100vh;
   font-family: "degular", serif;
   font-weight: 400;
@@ -104,40 +150,12 @@ section div.info figure{
   z-index: 2;
 }
 
-section div.info figure form{
-display: grid;
-color: var(--first-color);
-}
-
-section div.info figure form input[type="text"],
-section div.info figure form input[type="email"],
-section div.info figure form textarea[name="message"]{
-  color: var(--first-color);
-  background-color: var(--second-color);
-}
-
-section div.info figure form input[placeholder="Email"],
-section div.info figure form input[type="email"],
-section div.info figure form textarea[name="message"]{
-  color: var(--first-color);
-}
-
-
-section div.info figure form button{
-  background-color: var(--first-color);
-  font-family: "dottonoji", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.25;
-  cursor: none;
-  font-size: 0.75em;
-}
-
 section div.info p,
 section div.info figure {
   margin: 5em 0em;
   font-size: 1em;
   background-color: var(--second-color);
+  cursor: none;
 }
 
 section div.info p i{
@@ -150,51 +168,96 @@ section div.info p i:hover{
   font-weight: 400;
   font-style: normal; 
   text-decoration: underline;
-  color: #ff0000;
+  color: var(--third-color);
 }
 
-section div.info p:first-of-type,
-section div.info figure:first-of-type {
-  margin-top: 0;
-}
+section div.submissionForm {
+  /* padding-top: 0.5rem;
+  padding-left: 3vw;
+  padding-right: 1vw; */
+  height: 100vh;
+  padding: 2rem;
 
-section div.info p:last-of-type,
-section div.info figure:last-of-type {
-  margin-bottom: 0;
-}
-
-
-section:nth-child(1) div.title {
-  background-size: cover;
-  background-position: 50% 50%;
-
-  background-color: var(--second-color);
-  color: var(--first-color);
-}
-
-section:nth-child(2) div.title .designerList{
-  display: grid;
-  font-family: 'degular';
-  font-size: 1em;
-  grid-template: repeat(16 , 1fr) / 1fr 1fr 1fr 1fr;
-  height: 0vh;
-  margin: 0;
-  align-items: center;
-  justify-content: 100%;
-
+  position: sticky;
+  top: 0;
 }
 
 figcaption {
   text-transform: uppercase;
   font-size: 1em;
   margin-top: 0.2rem;
+  padding-left: 0.5em;
+  font-family: "dottonoji", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+  background-color: var(--second-color);
+  
+}
+
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+section div.submissionForm figure{
+  /* padding: 2rem; */
+  min-height: 30vh;
+
+  transform: translateY(60%);
+  font-family: "degular", serif;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 5;
+  background-color: var(--second-color);
+}
+
+section div.submissionForm figure form{
+  display: grid;
+  color: var(--first-color);
+}
+
+section div.submissionForm figure form input[type="text"],
+section div.submissionForm figure form input[type="email"],
+section div.submissionForm figure form textarea[name="message"]{
+  color: var(--first-color);
+  background-color: var(--second-color);
+  padding: 1em;
+  border: none;
+}
+
+section div.submissionForm figure form input[type="email"],
+section div.submissionForm figure form textarea[name="message"]{
+  color: var(--first-color);
+}
+
+section div.submissionForm figure form input::placeholder{
+  color: var(--first-color);
+  font-family: "degular", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+}
+
+
+section div.submissionForm figure form button{
+  background-color: var(--second-color);
+  color: var(--first-color);
+  padding: 1em;
   font-family: "dottonoji", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.25;
   cursor: none;
-  
+  font-size: 0.75em;
+  text-transform: uppercase;
+  border: none;
 }
+
+section div.submissionForm figure form button:hover{
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+
 
 img {
   max-width: 100%;
@@ -209,7 +272,7 @@ img {
     height: 60px; 
     width: 60px;
     border-radius: 50%;
-    background: rgb(255, 0, 0);
+    background: var(--third-color);
     mix-blend-mode: overlay;
     filter: blur(5px);
     pointer-events: none;
@@ -219,12 +282,40 @@ img {
   .line{
     position: fixed;
     z-index: 0;
-    outline: #ff0000 solid 0.5px;
+    outline: var(--third-color) solid 0.5px;
     height: 100vh;
     width: 0px;
     top: 50%;
     left: 83%;
     transform: translate(-50%,-50%);
+  }
+
+  canvas{
+    position: fixed;
+  }
+
+  .bottomTagline{
+    position: fixed;
+    bottom: 0em;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .bottomTagline marquee{
+    width: 100%;
+    display: block;
+
+    opacity: 0.9;
+
+    font-size: 1em;
+    text-transform: uppercase;
+    color: var(--first-color);
+    background-color: var(--second-color);
+    pointer-events: none;
   }
 
 @media (max-width: 800px) {
