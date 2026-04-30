@@ -47,6 +47,20 @@ figcaption:before {
   mix-blend-mode: color-burn;
 }
 
+figcaption:after {
+  content: '';
+  position: absolute;
+  margin-top: 1.5ex;
+  width: calc(15ex + 1vmax);
+  transform: translate(2ex, -2ex);
+  height: 3ex;
+  background-color: var(--second-color);
+  outline: 1px solid var(--third-color);
+  /* margin: 0 0.9em 0 0; */
+  mix-blend-mode: color-burn;
+  z-index: 1;
+}
+
 section {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -126,6 +140,19 @@ section div.designerList table h2{
   text-justify: inter-word;
 }
 
+
+section div.designerList .row{
+  opacity: 0;
+  transform: translate(80px, 0px);
+  transition: transform 1s;
+  background-color: var(--second-color);
+}
+
+section div.designerList .row.reveal{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 section div.designerList table p{
   padding: 1em 0.5em;
   align-self: center;
@@ -153,6 +180,7 @@ section div.info figure{
 section div.info p,
 section div.info figure {
   margin: 5em 0em;
+  /* padding-left: 0.5rem; */
   font-size: 1em;
   background-color: var(--second-color);
   cursor: none;
@@ -164,9 +192,9 @@ section div.info p i{
 }
 
 section div.info p i:hover{
-  font-family: "degular", sans-serif;
+  font-family: "dottonoji", sans-serif;
   font-weight: 400;
-  font-style: normal; 
+  font-style: normal;
   text-decoration: underline;
   color: var(--third-color);
 }
@@ -187,6 +215,8 @@ figcaption {
   font-size: 1em;
   margin-top: 0.2rem;
   padding-left: 0.5em;
+  margin-right: 10vw;
+  margin-left: 3vw;
   font-family: "dottonoji", sans-serif;
   font-weight: 400;
   font-style: normal;
