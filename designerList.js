@@ -5,7 +5,7 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       const row = entry.target;
 
-      const index = [length].indexOf(row);
+      const index = Array.from(rows).indexOf(row);
       row.style.transitionDelay = `${index * 50}ms`;
 
       row.classList.add('reveal');
